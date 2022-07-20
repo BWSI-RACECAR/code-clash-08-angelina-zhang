@@ -31,10 +31,18 @@ class Solution:
         # return: int
 
         # TODO: Write code below to return a double with the solution to the prompt
-        side_one = ((v1[1]- v2[1])**2+(v1[0]- v2[0])**2)**1/2
-        side_two = ((v3[1]- v2[1])**2+(v3[0]- v2[0])**2)**1/2
-        side_three = ((v3[1]- v1[1])**2+(v3[0]- v1[0])**2)**1/2
-        return side_one +side_two +side_three
+        # v1[0] = float(v1[0])
+        # v1[1] = float(v1[1])
+        # v2[0] = float(v2[0])
+        # v2[1] = float(v2[1])
+        # v3[0] = float(v3[0])
+        # v3[1] = float(v3[1])
+        side_one = ((v1[1]- v2[1])**2+(v1[0]- v2[0])**2)
+        side_one = side_one ** (1/2)
+        side_two = ((v3[1]- v2[1])**2+(v3[0]- v2[0])**2)**(1/2)
+        side_three = ((v3[1]- v1[1])**2+(v3[0]- v1[0])**2)**(1/2)
+        perim = (side_one +side_two +side_three)
+        return perim
 
 
 def main():
